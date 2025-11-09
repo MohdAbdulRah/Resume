@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohd Abdul Rahman - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #333;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 10px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            word-wrap: break-word;
+        }
+
+        h1 .first-name {
+            font-weight: 700;
+        }
+
+        .title {
+            font-size: 13px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding-top: 12px;
+            border-top: 1px solid #ddd;
+            display: inline-block;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1.2fr 2px 2fr;
+            gap: 35px;
+            margin-top: 35px;
+        }
+
+        .divider {
+            background: #ddd;
+            width: 2px;
+        }
+
+        .left-column, .right-column {
+            padding: 0 15px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            color: #222;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-item a {
+            color: #0066cc;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-list {
+            font-size: 12px;
+            line-height: 1.9;
+            word-wrap: break-word;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .school {
+            font-size: 12px;
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        .dates {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .about-text {
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .job {
+            margin-bottom: 30px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .company-dates {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .job ul {
+            margin-left: 18px;
+            font-size: 12px;
+        }
+
+        .job ul li {
+            margin-bottom: 7px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding: 40px 35px;
+            }
+
+            h1 {
+                font-size: 36px;
+                letter-spacing: 8px;
+            }
+
+            .title {
+                font-size: 12px;
+            }
+
+            .content {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px 8px;
+            }
+
+            .container {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+                letter-spacing: 6px;
+            }
+
+            .title {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .left-column, .right-column {
+                padding: 0 5px;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            .section {
+                margin-bottom: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 24px;
+                letter-spacing: 4px;
+            }
+
+            .title {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            .contact-item {
+                font-size: 11px;
+            }
+
+            .skills-list {
+                font-size: 11px;
+            }
+
+            .about-text,
+            .job-description {
+                font-size: 12px;
+            }
+
+            .job ul {
+                font-size: 11px;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .contact-item a {
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="first-name">MOHD</span> ABDUL RAHMAN</h1>
+            <div class="title">Web Developer & Data Scientist</div>
+        </header>
+
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>Contact</h2>
+                    <div class="contact-item">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <a href="mailto:mohdabdulrahman510@gmail.com">mohdabdulrahman510@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/MohdAbdulRah">MohdAbdulRah</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <a href="https://linkedin.com/in/mohd-abdul-rahman-776479285/">mohd-abdul-rahman-776479285</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Skills</h2>
+                    <div class="skills-list">
+                        HTML, CSS, JavaScript, TypeScript, React, Node.js, Express.js, REST APIs, Git, GitHub, Responsive Design, UI/UX Design, Testing (Jest, Cypress), Tailwind CSS, Sass, Web Performance Optimization, Python, SQL, Machine Learning, Deep Learning, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, PyTorch, Data Visualization, Data Analysis, Statistics, Probability, Data Cleaning, Feature Engineering, Model Deployment, Natural Language Processing, Computer Vision
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <div class="degree">B.Tech</div>
+                        <div class="school">Deccan College of Engineering and Technology</div>
+                        <div class="dates">2023-2027</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="right-column">
+                <div class="section">
+                    <h2>About</h2>
+                    <p class="about-text">
+                        I am a passionate and motivated web developer and aspiring data scientist with a strong foundation in building responsive, user-friendly web applications and analyzing data to derive meaningful insights. I enjoy solving challenging problems and continuously learning new technologies to enhance my skills. I am looking to work in an innovative and collaborative company that values creativity, encourages growth, and leverages cutting-edge technologies in web development or data-driven solutions.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2>Work Experience</h2>
+                    
+                    <div class="job">
+                        <div class="job-title">Software Developer</div>
+                        <div class="company-dates">ITGSS | 2024 - 2025</div>
+                        <p class="job-description">
+                            Developed and deployed scalable Java–React web applications, improving performance efficiency by 20% and reducing load times by 1.5 seconds on average.
+                        </p>
+                        <ul>
+                            <li>Collaborated within a 5-member Agile team to optimize backend services using Spring Boot, increasing API response speed by 30%.</li>
+                            <li>Designed and implemented RESTful APIs, enhancing data exchange efficiency between frontend and backend by 40%.</li>
+                            <li>Utilized JIRA to manage sprint tasks and Git for version control, maintaining 100% code traceability and improving collaboration among developers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
